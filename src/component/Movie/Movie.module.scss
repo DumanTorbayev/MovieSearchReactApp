@@ -1,0 +1,29 @@
+.movieCard {
+  padding: 1rem;
+  flex: 0 0 25%;
+}
+
+.poster {
+  position: relative;
+  overflow: hidden;
+  padding-top: 130%;
+  margin-bottom: 1rem;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.dFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    margin: 0 .5rem 0 0;
+  }
+}
