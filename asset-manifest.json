@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/MovieSearchReactApp/static/css/main.3200ca24.chunk.css",
-    "main.js": "/MovieSearchReactApp/static/js/main.8ab1ddc2.chunk.js",
-    "main.js.map": "/MovieSearchReactApp/static/js/main.8ab1ddc2.chunk.js.map",
+    "main.css": "/MovieSearchReactApp/static/css/main.9de659e1.chunk.css",
+    "main.js": "/MovieSearchReactApp/static/js/main.d96a87ca.chunk.js",
+    "main.js.map": "/MovieSearchReactApp/static/js/main.d96a87ca.chunk.js.map",
     "runtime-main.js": "/MovieSearchReactApp/static/js/runtime-main.4d82e385.js",
     "runtime-main.js.map": "/MovieSearchReactApp/static/js/runtime-main.4d82e385.js.map",
     "static/js/2.41ed2d63.chunk.js": "/MovieSearchReactApp/static/js/2.41ed2d63.chunk.js",
     "static/js/2.41ed2d63.chunk.js.map": "/MovieSearchReactApp/static/js/2.41ed2d63.chunk.js.map",
     "index.html": "/MovieSearchReactApp/index.html",
-    "precache-manifest.310b414edba0b0d783642d70d28e6d31.js": "/MovieSearchReactApp/precache-manifest.310b414edba0b0d783642d70d28e6d31.js",
+    "precache-manifest.9c9729e8a08b8b483bfdd7aa4f99b15d.js": "/MovieSearchReactApp/precache-manifest.9c9729e8a08b8b483bfdd7aa4f99b15d.js",
     "service-worker.js": "/MovieSearchReactApp/service-worker.js",
-    "static/css/main.3200ca24.chunk.css.map": "/MovieSearchReactApp/static/css/main.3200ca24.chunk.css.map",
+    "static/css/main.9de659e1.chunk.css.map": "/MovieSearchReactApp/static/css/main.9de659e1.chunk.css.map",
     "static/js/2.41ed2d63.chunk.js.LICENSE.txt": "/MovieSearchReactApp/static/js/2.41ed2d63.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4d82e385.js",
     "static/js/2.41ed2d63.chunk.js",
-    "static/css/main.3200ca24.chunk.css",
-    "static/js/main.8ab1ddc2.chunk.js"
+    "static/css/main.9de659e1.chunk.css",
+    "static/js/main.d96a87ca.chunk.js"
   ]
 }
