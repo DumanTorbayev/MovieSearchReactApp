@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-.movieWrap {
+.container, .movies_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

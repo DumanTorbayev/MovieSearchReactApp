@@ -56,32 +56,36 @@ const App = () => {
             <Header text={'Movie'}/>
             <div className={css.wrapper}>
                 <Search search={search}/>
-                <div className={css.movieWrap}>
+                <div className={css.container}>
                     {
                         loading && !error ?
                             <div>Loading...</div> :
                             error ?
                                 <div>{error}</div> :
-                                (
-                                    movies.map((movie, index) => (
-                                        <Movie key={`${index}_${movie}`} movie={movie}/>
-                                    ))
-                                )
+                                <div>
+                                    <div className={css.movies_container}>
+                                        {
+                                            movies.map((movie, index) => (
+                                                <Movie key={`${index}_${movie}`} movie={movie}/>
+                                            ))
+                                        }
+                                    </div>
+                                    <ReactPaginate
+                                        previousLabel={'prev'}
+                                        nextLabel={'next'}
+                                        breakLabel={'...'}
+                                        breakClassName={'break-me'}
+                                        pageCount={totalResults / 10} // 10 количество выводимых фильмов на одной странице, в API нет возможности изменять размер страницы
+                                        marginPagesDisplayed={2}
+                                        pageRangeDisplayed={5}
+                                        onPageChange={handlePageClick}
+                                        containerClassName={'pagination'}
+                                        subContainerClassName={'pages pagination'}
+                                        activeClassName={'active'}
+                                    />
+                                </div>
                     }
                 </div>
-                <ReactPaginate
-                    previousLabel={'prev'}
-                    nextLabel={'next'}
-                    breakLabel={'...'}
-                    breakClassName={'break-me'}
-                    pageCount={totalResults / 10}
-                    marginPagesDisplayed={2}
-                    pageRangeDisplayed={5}
-                    onPageChange={handlePageClick}
-                    containerClassName={'pagination'}
-                    subContainerClassName={'pages pagination'}
-                    activeClassName={'active'}
-                />
             </div>
         </div>
     );
