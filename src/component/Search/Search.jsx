@@ -8,14 +8,14 @@ const Search = (props) => {
         setSearchValue(e.target.value)
     }
 
-    const resetSearchInput = () => {
+    /*const resetSearchInput = () => {
         setSearchValue('');
-    }
+    }*/
 
     const callSearchFunction = (e) => {
         e.preventDefault();
         props.search(searchValue);
-        resetSearchInput();
+        //resetSearchInput();
     }
 
     return (
