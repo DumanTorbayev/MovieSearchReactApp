@@ -45,7 +45,6 @@ const App = () => {
 
     const handlePageClick = ({selected}) => {
         selected++;
-        console.log(selected);
         search(savedSearchValue, selected);
     }
 
