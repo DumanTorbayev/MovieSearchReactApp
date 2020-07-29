@@ -24,13 +24,14 @@ code {
   margin: 3rem 0 5rem;
 }
 
-.pagination li {
+.pagination li a {
   color: black;
   padding: 8px 16px;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.pagination li.active {
+.pagination li.active a {
   background-color: #0E1957;
   color: white;
 }

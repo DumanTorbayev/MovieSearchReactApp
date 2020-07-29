@@ -11,13 +11,14 @@ import {
     searchMovieSuccess,
     setTotalResults
 } from "../../reducers/reducer";
-import ReactPaginate from 'react-paginate';
+import Pagination from "react-js-pagination";
 
 const MOVIE_API_URL = 'https://www.omdbapi.com/?s=action&apikey=10f16cad'
 
 const App = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const [savedSearchValue, setSavedSearchValue] = useState('action');
+    const [activePage, setActivePage] = useState(1);
 
     useEffect(() => {
         fetch(MOVIE_API_URL)
@@ -28,7 +29,7 @@ const App = () => {
             });
     }, []);
 
-    const search = (searchValue, page = 1) => {
+    const search = (searchValue, page = activePage) => {
         setSavedSearchValue(searchValue)
         dispatch(searchMovieRequest());
 
@@ -43,9 +44,9 @@ const App = () => {
             })
     }
 
-    const handlePageClick = ({selected}) => {
-        selected++;
-        search(savedSearchValue, selected);
+    const handlePageClick = (pageNumber) => {
+        search(savedSearchValue, pageNumber);
+        setActivePage(pageNumber);
     }
 
     const {loading, movies, error, totalResults} = state;
@@ -69,18 +70,13 @@ const App = () => {
                                             ))
                                         }
                                     </div>
-                                    <ReactPaginate
-                                        previousLabel={'prev'}
-                                        nextLabel={'next'}
-                                        breakLabel={'...'}
-                                        breakClassName={'break-me'}
-                                        pageCount={totalResults / 10} // 10 количество выводимых фильмов на одной странице, в API нет возможности изменять размер страницы
-                                        marginPagesDisplayed={2}
+
+                                    <Pagination
+                                        activePage={activePage}
+                                        itemsCountPerPage={10} // 10 количество выводимых фильмов на одной странице, в API нет возможности изменять размер страницы
+                                        totalItemsCount={+totalResults} // унарный " + " для преобразования строки в число
                                         pageRangeDisplayed={5}
-                                        onPageChange={handlePageClick}
-                                        containerClassName={'pagination'}
-                                        subContainerClassName={'pages pagination'}
-                                        activeClassName={'active'}
+                                        onChange={handlePageClick}
                                     />
                                 </div>
                     }
